@@ -80,7 +80,7 @@ def post():
 
             cursor = connection.cursor()
 
-            sql = """SELECT * FROM tbl_carcollection"""
+            sql = """SELECT * FROM ritelane_db.tbl_carcollection"""
 
             cursor.execute(sql)
 
@@ -131,15 +131,15 @@ def post():
             cursor.fetchall()
 
             if cursor.rowcount == 0:
-                sql = """INSERT INTO tbl_carcollection2( car_name, car_desc, image) VALUES (%s,%s,%s)"""
-                cursor.execute(sql, (car_name2, car_desc2, filename))
+                sql = """INSERT INTO tbl_carcollection2( car_name, car_desc, image, id) VALUES (%s,%s,%s,%s)"""
+                cursor.execute(sql, (car_name2, car_desc2, filename, 1))
 
                 # commit/rollback -if the connection crashes before it commits, it should render back
                 connection.commit()
                 return redirect('/update')
                 # return render_template('add.html', msg="CONGRATS! SUCCESSFULLY SAVED")
             elif cursor.rowcount == 1:
-                sql = """UPDATE tbl_carcollection2 SET car_name = [%s], car_desc = [%s], image = [%s] WHERE user_id = 1 """
+                sql = """UPDATE tbl_carcollection2 SET car_name = [%s], car_desc = [%s], image = [%s] WHERE `user_id` = 1"""
                 cursor.execute(sql, (car_name2, car_desc2, filename))
 
                 connection.commit()
@@ -183,7 +183,7 @@ def post():
                 return redirect('/update')
                 # return render_template('add.html', msg="CONGRATS! SUCCESSFULLY SAVED")
             elif cursor.rowcount == 1:
-                sql = """UPDATE tbl_carcollection3 SET car_name = [%s], car_desc = [%s], image = [%s] WHERE user_id = 1"""
+                sql = """UPDATE tbl_carcollection3 SET car_name = [%s], car_desc = [%s], image = [%s] WHERE id = 1"""
                 cursor.execute(sql, (car_name3, car_desc3, filename))
 
                 connection.commit()
