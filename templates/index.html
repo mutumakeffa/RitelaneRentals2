@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<title>Ritelane</title>
+
+    <!-- Bootstrap core CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<!-- <body background="images/car-rental-homepage2.jpeg"> -->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+	<!--Header section  -->
+	<header>
+		<!--Navbar-->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark primary-color fixed-top justify-content-between">
+
+		  <div class="container">
+
+		    <!-- Navbar brand -->
+		    <a class="navbar-brand" href="/">Ritelane Rentals</a>
+
+		    <!-- Toggler/Collapsible button -->
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+
+		    <!-- Collapsible content -->
+		    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		      <!-- Links -->
+		      <ul class="navbar-nav ml-auto">
+		        <li class="nav-item">
+		          <a class="nav-link" href="/">Home
+		            <!-- <span class="sr-only">(current)</span> -->
+		          </a>
+		        </li>
+		        <li class="nav-item">
+		         	<a class="nav-link" href="#CarCollection">Collection</a>
+		        </li>
+		        <li>
+		        	<a class="nav-link" href="#TestimonialsPage">Testimonials</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#Contacts">Contact</a>
+		        </li>
+		        <!-- <li class="nav-item">
+		          <a class="nav-link btn btn-outline-light ml-3" type="button" href="https://turo.com/drivers/5734225"> Book on Turo </a>
+		        </li> -->
+		      </ul>
+		      <!-- Links -->
+
+		      <div class="md-form my-0 ml-3 nav-item">
+		        <a href="https://turo.com/drivers/5734225" type="button" class="btn btn-outline-light nav-link"> Book on Turo </a>
+		      </div>
+		    </div>
+		    <!-- Collapsible content -->
+
+		  </div>
+
+		</nav>
+		<!--/.Navbar-->
+
+		<!--Mask-->
+		<!-- <div id="intro" class="view">
+			<img src="images/car-rental-homepage2.jpeg" class="img-fluid" alt="">
+			<div class="mask flex-center rgba-black-strong">
+				<p class="white-text">strong overlay</p>
+			</div>
+		</div> -->
+		<!--/.Mask-->
+
+	</header>
+	<!--/Header section  -->
+
+	<section class="row">
+		<div class="col" id="/">
+  			<img src="../static/car-rental-homepage2compressed.jpeg" class="img-fluid"  style="height: 100%; width: 100%;" id="homepage" alt="">
+  			<div class="overlay rounded">
+  				<h1 class="text-center" style="font-family: lato; font-weight: 500;">RITELANE RENTALS</h1>
+  				<hr>
+    			<h2 class="text-center">Your reliable car rental partner</h2>
+    			<div align="center" class="mt-5">
+    				<a href="#CarCollection" class="btn btn-outline-light pl-4 pr-4 pt-2 pb-2" align="center"> view car collection</a>
+    			</div>
+  			</div>
+		</div>
+	</section>
+
+	<style type="text/css">
+		.overlay {
+		  	position: absolute;
+		  	top: 50%; left: 50%;
+		  	transform: translate(-50%,-50%);
+		  	background: rgba(0,0,0,0.3);
+		  	/*background:url(../images/car5.jpg);*/
+		  	color: white;
+		  	padding: 3em;
+		}
+
+		@media(max-width: 767px){
+			h1,h2{
+				font-size: 1.5em;
+			}
+
+			body{
+				font-size: 0.8em;
+			}
+
+			#homepage{
+				min-height: 250px;
+				height: 100%;
+			}
+
+			.overlay {
+				margin-top: 1.5em;
+				padding: 1.5em;
+			}
+
+
+		}
+
+		@media(max-width: 520px){
+			h1,h2{
+				font-size: 1.5em;
+			}
+		}
+	</style>
+
+	<!--Welcome phrase -->
+	<section class="m-0">
+		<div align="center">
+			<div class="container">
+
+				<p class="mt-1" style="font-size: 1em; font-weight: 700; color: #6c757d">
+				<img src="../static/review/kenPic.jpg" class="rounded-circle" style="width: 50%; height: 50%; max-height: 3em; max-width: 3em;">
+
+				<i class="fas fa-quote-left"></i> &nbsp <i>we aim to make our customers aware that hiring a car is the next best option to buying a car </i> - Ken &nbsp <i class="fas fa-quote-right"></i>
+
+				</p>
+
+			</div>
+		</div>
+	</section>
+	<!--End of wekcome phase -->
+
+	<!--Welcome about section -->
+	<section class=" jumbotron mb-0">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+			        <img src="../static/car8compressed.jpg" alt="" class="img-fluid" style="height: auto; object-fit: cover">
+			    </div>
+
+			    <div class="col-md-8">
+			    	<div class="container">
+			        <h3 style="font-weight: 400; color: #262626">About Ritelane Rentals</h3> <hr>
+			        <p style="font-weight: 600">We provide car rental services to cater for your needs with excellent rates, superb quality, and service you can count on each and every visit. Our cars are clean and well maintained that meet our client's standards.
+			        We are located in ..... We aim to make your trips as smooth and as enjoyable as possible.</p>
+			        </div>
+			    </div>
+			</div>
+		</div>
+
+	</section>
+	<!--End of about section -->
+
+	<div class="p-5" style=" background-image: url(../static/car2compressed.jpg); width: 100%; margin: 0 auto" >
+		<div align="center">
+            <form action="/signup" method="post">
+                <h3 style="color: white; margin: 0 0 1rem 0;" class="">Sign up to receive 20% discount on your first booking </h3>
+                <input type="text" name="email_add" class="p-2 pl-5 pr-5 rounded" placeholder="Your Email Address" style="text-align: center;">
+                <button type="submit" class="btn btn-primary blue-gradient btn-rounded p-2 pl-5 pr-5 m-0" style="background-image: linear-gradient(to right, rgb(224, 82, 160), rgb(241, 92, 65)); font-weight: bolder;"> SIGN ME UP </button>
+            </form>
+		</div>
+
+		<hr class="my-4 pb-2">
+	</div>
+
+
+	<br>
+
+	<h3 class="text-center p-4 mt-2" id="CarCollection"> Our Car Collection ...<hr> </h3>
+	<!--Start of card collection section -->
+	<section>
+		<div class="container-fluid">
+			<div class="row">
+
+		        <div class="col-md-4">
+		          <div class="card h-100 shadow rounded">
+					  <img class="card-img-top" src="../static/HondaCivicCompressed.jpg" alt="Card image cap" style="height: 50%; object-fit: cover; max-height: 200px">
+					  <div class="card-body" align="center">
+					    <h4 class="card-title" style="font-weight: bold;" >Honda Civic</h4>
+					    <p class="card-text">Compact 4dr Sedan, with... Comfy Cloth seats, Blue and white Interior looks and Feels good, USB Port and Aux Cable provided, Integrated Motor Assist</p>
+					  </div>
+					  <div class="card-footer" align="center">
+					    <a href="https://turo.com/rentals/cars/ma/worcester/honda-civic/416910" class="btn btn-primary p-2 pr-5 pl-5" style="background-image: linear-gradient(to right, rgb(224, 82, 160), rgb(241, 92, 65)); font-weight: bolder; border-color: white;">Book</a>
+					  </div>
+					</div>
+		         </div>
+
+
+				<div class="col-md-4">
+		          	<div class="card h-100 shadow rounded">
+					  <img class="card-img-top" src="../static/mercedesCompressed.jpg" alt="Car rental image" style="height: 50%; object-fit: cover; max-height: 200px; ">
+					  <div class="card-body" align="center">
+					    <h4 class="card-title" style="font-weight: bolder;">Mercedes-Benz C-class</h4>
+					    <p class="card-text">Compact 4dr Sedan, with... Comfy heated leather seats, Tan Interior looks and Feels good, USB Port and Aux Cable provided</p>
+					  </div>
+					  <div class="card-footer" align="center">
+					    <a href="https://turo.com/rentals/cars/ma/worcester/mercedes-benz-c-class/512798" class="btn btn-primary p-2 pl-5 pr-5" style="background-image: linear-gradient(to right, rgb(224, 82, 160), rgb(241, 92, 65)); font-weight: bolder; border-color: white;">Book</a>
+					  </div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+		          	<div class="card h-100 shadow rounded">
+					  <img class="card-img-top" src="../static/toyotaPriuscompressed.jpg" alt="Car rental image" style="height: 50%; object-fit: cover; max-height: 200px;">
+					  <div class="card-body" align="center">
+					    <h4 class="card-title" style="font-weight: bold;">Toyota Prius</h4>
+					    <p class="card-text">Compact 4dr Sedan, with.. Up to 48MPG Comfy Cloth seats, Tan Interior looks and Feels good, USB Port and Aux Cable provided</p>
+					  </div>
+					  <div class="card-footer" align="center">
+					    <a href="https://turo.com/rentals/cars/ma/worcester/toyota-prius/502433" class="btn btn-primary p-2 pl-5 pr-5" style="background-image: linear-gradient(to right, rgb(224, 82, 160), rgb(241, 92, 65)); font-weight: bolder; border-color: white;">Book</a>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<!--End of card row -->
+		</div>
+
+		<div align="center" class="mb-5 mt-5">
+			<a href="#" class="btn btn-outline-primary text-center pl-5 pr-5 pt-3 pb-3 shadow" style="font-size: 1.2em; background-color: #155d74; color: white; font-weight: bold;"> View entire collection
+			</a>
+		</div>
+
+	</section>
+
+	<!--Testimonials section-->
+	<section class="testimonials text-center bg-light" style="padding-top: 2rem; padding-bottom: 7rem; background-color: #f8f9fa;">
+		<div class="container" id="TestimonialsPage">
+			<h2 class="mb-5" style="color: #212529; font-weight: 400">What people are saying...</h2>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="testimonial-item m-x-auto mb-5 mb-lg-0">
+						<img class="img-fluid rounded-circle mb-3 d-block mx-auto" src="../static/review/review1.jpg" alt="" style="width: 50%; height: 50%; max-width: 8em; max-height: 8em; box-shadow: rgb(173, 181, 189) 0px 5px 5px 0px; border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;">
+						<h5 style="font-size: 20px; font-weight: 700; line-height: 24px;">Douglas </h5>
+						<p class="mb-0" style="color: rgb(33, 37, 41);"> &#8220 Everything was awesome! Ken helped a lot and the car is great! &#8221</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="testimonial-item mx-auto mb-5 mb-lg-0">
+						<img class="img-fluid rounded-circle mb-3" src="../static/review/review2.jpg" alt="" style="width: 50%; height: 50%; max-width: 8em; max-height: 8em; box-shadow: rgb(173, 181, 189) 0px 5px 5px 0px; border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;">
+						<h5 style="font-size: 20px; font-weight: 700; line-height: 24px;">Brenda</h5>
+						<p class="mb-0">&#8220 Ken was amazing! Super easy to work with, kind and very helpful. The car was very clean, had a full tank of gas and ran extremely well. I would definitely rent Ken’s vehicle again when I return to the area..Thanks so much 😊 &#8221</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="testimonial-item mx-auto mb-5 mb-lg-0">
+						<img class="img-fluid rounded-circle mb-3" src="../static/review/review3.jpg" alt="" style="width: 50%; height: 50%; max-width: 8em; max-height: 8em; box-shadow: rgb(173, 181, 189) 0px 5px 5px 0px; border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;">
+						<h5 style="font-size: 20px; font-weight: 700; line-height: 24px;">Dana</h5>
+						<p class="mb-0">&#8220 Great job very helpful! Communication with ken was easy.. thank you ken! &#8221</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+	<!--End of Testimonials -->
+
+
+	<footer class="row mb-0 mt-0 p-5" style="background-color: #2f2f2f;">
+		<div class="col-md-12" id="Contacts">
+			<p align="center" style="color: white;"> &copy; Ritelane Rentals LLC </p>
+            <p align="center" style="color: white;">Your reliable car rental provider</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p align="center" style="color: white;">helpline +1 508 831 8666 for support</p>
+            <p align="center" style="color: white;">reach out via email: info@ritelane.com</p>
+		</div>
+
+	</footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+</body>
+</html>
