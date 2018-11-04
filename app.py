@@ -112,6 +112,24 @@ def view():
     else:
         return render_template('view_collection.html', data=rows)
 
+@app.route('/emails')
+def emails():
+
+    cursor = connection.cursor()
+
+    sql = """SELECT * FROM tbl_emails"""
+
+    cursor.execute(sql)
+
+    # fetch rows
+    rows = cursor.fetchall()  # rows can contain 0,1 or more rows
+
+    # perform a row count
+    if cursor.rowcount == 0:
+        return render_template('admin2.html', msg='No records')
+    else:
+        return render_template('admin2.html', data=rows)
+
 
 if __name__ == '__main__':
     app.run()

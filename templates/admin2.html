@@ -41,12 +41,13 @@
 		      <!-- Links -->
 		      <ul class="navbar-nav ml-auto">
 		        <li class="nav-item">
-		          <a class="nav-link" href="/">Home
-		            <!-- <span class="sr-only">(current)</span> -->
-		          </a>
+		          <a class="nav-link" href="/">Home</a>
 		        </li>
                 <li class="nav-item">
-		         	<a class="nav-link" href="/view">View all car Collection</a>
+		         	<a class="nav-link" href="/view">View Car Collection</a>
+		        </li>
+                <li class="nav-item">
+		         	<a class="nav-link" href="/emails">View Emails</a>
 		        </li>
 		        <!-- <li class="nav-item">
 		          <a class="nav-link btn btn-outline-light ml-3" type="button" href="https://turo.com/drivers/5734225"> Book on Turo </a>
@@ -122,6 +123,25 @@
 
     <!-- End of updating car collection -->
 
+    <!-- Email Section -->
+    <section>
+        <br><br>
+        <h4><b>Below is a list of email signups</b></h4>
+        <br>
+        <table width="100%" class="table table-dark table-hover">
+
+    {% for row in data %}    <!-- For every row that the data has, retrieve all its columns, which are 5 in number-->
+        <tr>
+            <td>{{ row[1] }}</td>
+            <!-- <td><a href="" class="btn btn-info">MORE</a></td> -->
+
+        </tr>
+    {% endfor %}
+
+    </table>
+
+    </section>
+    <!-- End of email section -->
 
 
     <!-- Bootstrap core JavaScript -->
