@@ -85,7 +85,7 @@ def post():
             try:
                 cursor.execute(sql, (car_name1, car_desc1, filename, turo_link))
                 connection.commit()
-                return render_template('view_collection.html', msg="Car added successfully, add another")
+                return render_template('admin2.html', msg="Car added successfully, add another")
             except:
                 connection.commit()
                 return redirect('/view')
