@@ -70,130 +70,14 @@
 
 		</nav>
 		<!--/.Navbar-->
-
-		<!--Mask-->
-		<!-- <div id="intro" class="view">
-			<img src="images/car-rental-homepage2.jpeg" class="img-fluid" alt="">
-			<div class="mask flex-center rgba-black-strong">
-				<p class="white-text">strong overlay</p>
-			</div>
-		</div> -->
-		<!--/.Mask-->
-
-	</header>
-	<!--/Header section  -->
-
-	<section class="row">
-		<div class="col" id="/">
-  			<img src="../static/car-rental-homepage2compressed.jpeg" class="img-fluid"  style="height: 100%; width: 100%;" id="homepage" alt="">
-  			<div class="overlay rounded">
-  				<h1 class="text-center" style="font-family: lato; font-weight: 500;">RITELANE RENTALS</h1>
-  				<hr>
-    			<h2 class="text-center">Your reliable car rental partner</h2>
-    			<div align="center" class="mt-5">
-    				<a href="#CarCollection" class="btn btn-outline-light pl-4 pr-4 pt-2 pb-2" align="center"> view car collection</a>
-    			</div>
-  			</div>
-		</div>
-	</section>
-
-	<style type="text/css">
-		.overlay {
-		  	position: absolute;
-		  	top: 50%; left: 50%;
-		  	transform: translate(-50%,-50%);
-		  	background: rgba(0,0,0,0.3);
-		  	/*background:url(../images/car5.jpg);*/
-		  	color: white;
-		  	padding: 3em;
-		}
-
-		@media(max-width: 767px){
-			h1,h2{
-				font-size: 1.5em;
-			}
-
-			body{
-				font-size: 0.8em;
-			}
-
-			#homepage{
-				min-height: 250px;
-				height: 100%;
-			}
-
-			.overlay {
-				margin-top: 1.5em;
-				padding: 1.5em;
-			}
-
-
-		}
-
-		@media(max-width: 520px){
-			h1,h2{
-				font-size: 1.5em;
-			}
-		}
-	</style>
-
-	<!--Welcome phrase -->
-	<section class="m-0">
-		<div align="center">
-			<div class="container">
-
-				<p class="mt-1" style="font-size: 1em; font-weight: 700; color: #6c757d">
-				<img src="../static/review/kenPic.jpg" class="rounded-circle" style="width: 50%; height: 50%; max-height: 3em; max-width: 3em;">
-
-				<i class="fas fa-quote-left"></i> &nbsp <i>we aim to make our customers aware that hiring a car is the next best option to buying a car </i> - Ken &nbsp <i class="fas fa-quote-right"></i>
-
-				</p>
-
-			</div>
-		</div>
-	</section>
-	<!--End of wekcome phase -->
-
-	<!--Welcome about section -->
-	<section class=" jumbotron mb-0">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-			        <img src="../static/car8compressed.jpg" alt="" class="img-fluid" style="height: auto; object-fit: cover">
-			    </div>
-
-			    <div class="col-md-8">
-			    	<div class="container">
-			        <h3 style="font-weight: 400; color: #262626">About Ritelane Rentals</h3> <hr>
-			        <p style="font-weight: 600">We provide car rental services to cater for your needs with excellent rates, superb quality, and service you can count on each and every visit. Our cars are clean and well maintained that meet our client's standards.
-			        We are located in ..... We aim to make your trips as smooth and as enjoyable as possible.</p>
-			        </div>
-			    </div>
-			</div>
-		</div>
-
-	</section>
-	<!--End of about section -->
-
-	<div class="p-5" style=" background-image: url(../static/car2compressed.jpg); width: 100%; margin: 0 auto" >
-		<div align="center">
-            <form action="/signup" method="post">
-                <h3 style="color: white; margin: 0 0 1rem 0;" class="">Sign up to receive 25% discount on your first booking </h3>
-                <input type="text" name="email_add" class="p-2 pl-5 pr-5 rounded" placeholder="Your Email Address" style="text-align: center;">
-                <button type="submit" class="btn btn-primary blue-gradient btn-rounded p-2 pl-5 pr-5 m-0" style="background-image: linear-gradient(to right, rgb(224, 82, 160), rgb(241, 92, 65)); font-weight: bolder;"> SIGN ME UP </button>
-            </form>
-		</div>
-
-		<hr class="my-4 pb-2">
-	</div>
-
+    </header>
 
 	<br>
 
-	<h3 class="text-center p-4 mt-2" id="CarCollection"> Our Car Collection ...<hr> </h3>
+	<h3 class="text-center p-4 mt-4"> Our Car Collection ...<hr> </h3>
 	<!--Start of card collection section -->
 	<section>
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 
 		        <div class="col-md-4">
@@ -235,52 +119,30 @@
 					  </div>
 					</div>
 				</div>
+
+                <br>
+
+                {% for row in data %}
+                <div class="col-md-4">
+                    <div class="card h-100 shadow rounded">
+                        <img class="card-img-top img-fluid" src="../static/uploads/{{ row[3] }}" alt="Car rental image" style="height: 50%; object-fit: cover; max-height: 200px;">
+                        <div class="card-body" align="center">
+                            <h4 class="card-title" style="font-weight: bold;">{{ row[1] }}</h4>
+                            <p class="card-text">{{ row[2] }}</p>
+                        </div>
+                        <div class="card-footer" align="center">
+                            <a href="{{ row[4] }}" class="btn btn-primary p-2 pl-5 pr-5" style="background-image: linear-gradient(to right, rgb(224, 82, 160), rgb(241, 92, 65)); font-weight: bolder; border-color: white;">Book</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
 			</div>
 			<!--End of card row -->
 		</div>
-
-
-
-		<div align="center" class="mb-5 mt-5">
-			<a href="/view" class="btn btn-outline-primary text-center pl-5 pr-5 pt-3 pb-3 shadow" style="font-size: 1.2em; background-color: #155d74; color: white; font-weight: bold;"> View entire collection
-			</a>
-		</div>
-
 	</section>
 
-	<!--Testimonials section-->
-	<section class="testimonials text-center bg-light" style="padding-top: 2rem; padding-bottom: 7rem; background-color: #f8f9fa;">
-		<div class="container" id="TestimonialsPage">
-			<h2 class="mb-5" style="color: #212529; font-weight: 400">What people are saying...</h2>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="testimonial-item m-x-auto mb-5 mb-lg-0">
-						<img class="img-fluid rounded-circle mb-3 d-block mx-auto" src="../static/review/review1.jpg" alt="" style="width: 50%; height: 50%; max-width: 8em; max-height: 8em; box-shadow: rgb(173, 181, 189) 0px 5px 5px 0px; border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;">
-						<h5 style="font-size: 20px; font-weight: 700; line-height: 24px;">Douglas </h5>
-						<p class="mb-0" style="color: rgb(33, 37, 41);"> &#8220 Everything was awesome! Ken helped a lot and the car is great! &#8221</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="testimonial-item mx-auto mb-5 mb-lg-0">
-						<img class="img-fluid rounded-circle mb-3" src="../static/review/review2.jpg" alt="" style="width: 50%; height: 50%; max-width: 8em; max-height: 8em; box-shadow: rgb(173, 181, 189) 0px 5px 5px 0px; border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;">
-						<h5 style="font-size: 20px; font-weight: 700; line-height: 24px;">Brenda</h5>
-						<p class="mb-0">&#8220 Ken was amazing! Super easy to work with, kind and very helpful. The car was very clean, had a full tank of gas and ran extremely well. I would definitely rent Ken’s vehicle again when I return to the area..Thanks so much 😊 &#8221</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="testimonial-item mx-auto mb-5 mb-lg-0">
-						<img class="img-fluid rounded-circle mb-3" src="../static/review/review3.jpg" alt="" style="width: 50%; height: 50%; max-width: 8em; max-height: 8em; box-shadow: rgb(173, 181, 189) 0px 5px 5px 0px; border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;">
-						<h5 style="font-size: 20px; font-weight: 700; line-height: 24px;">Dana</h5>
-						<p class="mb-0">&#8220 Great job very helpful! Communication with ken was easy.. thank you ken! &#8221</p>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-	</section>
-	<!--End of Testimonials -->
-
+        <br> <br> <br> <br>
 
 	<footer class="row mb-0 mt-0 p-5" style="background-color: #2f2f2f;">
 		<div class="col-md-12" id="Contacts">
