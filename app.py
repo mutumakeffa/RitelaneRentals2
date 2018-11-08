@@ -17,11 +17,7 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024
 
-<<<<<<< HEAD
-connection = pymysql.connect("207.148.17.93", "root", "e4TcD]etqWY{P{HJA>RtHj#gAE3n=9UBK3XRQNWF*wERAY62", "ritelane_db")
-=======
 connection = pymysql.connect("localhost", "root", "", "ritelane_db")
->>>>>>> b3140f6808da8221ef2232c0b15ae86655f20e5f
 
 # this function is used to check if the allowed image extensions has been met
 def allowed_file(filename):
@@ -76,52 +72,8 @@ def post():
 
                 # once the file is saved, save the link to the db
 
-<<<<<<< HEAD
-            # connection has true or false connection
-            # create a cursor and use it to execute SQL --- Cursor helps to execute sql
-
-            cursor = connection.cursor()
-
-            sql = """SELECT * FROM ritelane_db.tbl_carcollection"""
-
-            cursor.execute(sql)
-
-            cursor.fetchall()
-
-            if cursor.rowcount == 0:
-                sql = """INSERT INTO tbl_carcollection( car_name, car_desc, image) VALUES (%s,%s,%s)"""
-                cursor.execute(sql, (car_name1, car_desc1, filename))
-
-                # commit/rollback -if the connection crashes before it commits, it should render back
-                connection.commit()
-                return redirect('/admin')
-                # return render_template('add.html', msg="CONGRATS! SUCCESSFULLY SAVED")
-            elif cursor.rowcount == 1:
-                sql = """UPDATE tbl_carcollection SET car_name = [%s], car_desc = [%s], image = [%s] WHERE user_id = 1 """
-                cursor.execute(sql, (car_name1, car_desc1, filename))
-
-                connection.commit()
-                return redirect('/admin')
-            else:
-                return redirect('admin')
-
-        elif request.method == 'POST':
-            car_name2 = request.form['car_name2']
-            car_desc2 = request.form['car_desc2']
-            file2 = request.files['file2']  # receive file
-
-            # check if file is present and allowed
-            if file2 and allowed_file(file2.filename):
-                filename = secure_filename(file2.filename)
-                # save the file with its filename
-                file2.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-
-                # once the file is saved, save the link to the db
-
-=======
             # now we want to save this data in the database hence we have to import pymysql as the connector to the sql
             # connection = pymysql.connect("localhost", "root", "", "ritelane_db")
->>>>>>> b3140f6808da8221ef2232c0b15ae86655f20e5f
 
             # connection has true or false connection
             # create a cursor and use it to execute SQL --- Cursor helps to execute sql
@@ -138,30 +90,8 @@ def post():
                 connection.commit()
                 return redirect('/view')
 
-<<<<<<< HEAD
-        elif request.method == 'POST':
-            car_name3 = request.form['car_name3']
-            car_desc3 = request.form['car_desc3']
-            file3 = request.files['file3']  # receive file
-
-            # check if file is present and allowed
-            if file3 and allowed_file(file3.filename):
-                filename = secure_filename(file3.filename)
-                # save the file with its filename
-                file3.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-
-                # once the file is saved, save the link to the db
-
-            # connection has true or false connection
-            # create a cursor and use it to execute SQL --- Cursor helps to execute sql
-
-            cursor = connection.cursor()
-
-            sql = """ SELECT * FROM tbl_carcollection3"""
-=======
         else:
             return render_template('admin2.html', msg2="No data entered yet")
->>>>>>> b3140f6808da8221ef2232c0b15ae86655f20e5f
 
 
 @app.route('/view')
@@ -182,14 +112,9 @@ def view():
     else:
         return render_template('view_collection.html', data=rows)
 
-<<<<<<< HEAD
-@app.route('/view', methods=['POST', 'GET'])
-def view():
-=======
 @app.route('/emails')
 def emails():
 
->>>>>>> b3140f6808da8221ef2232c0b15ae86655f20e5f
     cursor = connection.cursor()
 
     sql = """SELECT * FROM tbl_emails"""
