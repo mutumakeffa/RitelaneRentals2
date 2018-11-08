@@ -2,6 +2,8 @@ import os
 from os.path import join, dirname, realpath
 import pymysql as pymysql
 from flask import Flask, render_template, request, redirect
+from dotenv import load_dotenv
+load_dotenv()
 
 #we want to upload the image
 from werkzeug.utils import secure_filename
@@ -17,7 +19,7 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024
 
-connection = pymysql.connect("localhost", "root", "", "ritelane_db")
+connection = pymysql.connect("207.148.17.93", "root", os.getenv("DB_PASSWORD"), "ritelane_db")
 
 # this function is used to check if the allowed image extensions has been met
 def allowed_file(filename):
