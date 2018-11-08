@@ -3,7 +3,9 @@ from os.path import join, dirname, realpath
 import pymysql as pymysql
 from flask import Flask, render_template, request, redirect
 from dotenv import load_dotenv
-load_dotenv()
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
 
 #we want to upload the image
 from werkzeug.utils import secure_filename
