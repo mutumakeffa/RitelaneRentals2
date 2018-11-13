@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -61,7 +61,7 @@
 		      <!-- Links -->
 
 		      <div class="md-form my-0 ml-3 nav-item">
-		        <a href="https://turo.com/drivers/5734225" type="button" class="btn nav-link" style="color: black;"> Book on Turo </a>
+                  <button href="https://turo.com/drivers/5734225" type="button" class="btn nav-link" style="color: black;"> Book on Turo </button>
 		      </div>
 		    </div>
 		    <!-- Collapsible content -->
@@ -71,19 +71,10 @@
 		</nav>
 		<!--/.Navbar-->
 
-		<!--Mask-->
-		<!-- <div id="intro" class="view">
-			<img src="images/car-rental-homepage2.jpeg" class="img-fluid" alt="">
-			<div class="mask flex-center rgba-black-strong">
-				<p class="white-text">strong overlay</p>
-			</div>
-		</div> -->
-		<!--/.Mask-->
-
 	</header>
 	<!--/Header section  -->
 
-	<section class="row">
+	<section class="row frontpage">
 		<div class="col" id="/">
   			<img src="../static/car-rental-homepage2compressed.jpeg" class="img-fluid"  style="height: 100%; width: 100%;" id="homepage" alt="">
   			<div class="overlay rounded">
@@ -117,15 +108,22 @@
 				font-size: 0.8em;
 			}
 
-			#homepage{
+			/*#homepage{
 				min-height: 250px;
 				height: 100%;
-			}
+			} */
 
 			.overlay {
-				margin-top: 1.5em;
-				padding: 1.5em;
+				/*margin-top: 1.5em;*/
+				/*padding: 1.5em; */
+                margin: 0 auto;
 			}
+
+            .frontpage {
+                background: url(../static/car-rental-homepage2compressed.jpeg) no-repeat center;
+                height: 100vh;
+
+            }
 
 
 		}
