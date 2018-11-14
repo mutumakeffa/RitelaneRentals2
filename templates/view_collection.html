@@ -82,7 +82,57 @@
 
 		        <div class="col-md-4">
 		          <div class="card h-100 shadow rounded">
-					  <img class="card-img-top" src="../static/HondaCivicCompressed.jpg" alt="Card image cap" style="height: 50%; object-fit: cover; max-height: 200px">
+                      <div class="img-container" style="height: 50%; object-fit: cover; max-height: 200px">
+					    <img class="card-img-top" src="../static/HondaCivicCompressed.jpg" alt="Card image cap">
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#ModalCenter">view</button>
+                          <style>
+                              .img-container .btn {
+                                  position: absolute;
+                                  top: 7%;
+                                  left: 85%;
+                                  transform: translate(-50%, -50%);
+                                  -ms-transform: translate(-50%, -50%);
+                                  color: white;
+                                  background-color: lightcoral;
+                                  font-size: .95em;
+                                  border: none;
+                                  cursor: pointer;
+                                  border-radius: 5px;
+                                }
+
+                                .img-container .btn:hover {
+                                  background-color: orangered;
+                                }
+                          </style>
+
+                              <!-- Modal -->
+                          <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4"><img src="../static/Honda1-min.jpg" class="img-fluid"> </div>
+                                            <div class="col-md-4 mt-2"><img src="../static/Honda2-min.jpg" class="img-fluid"> </div>
+                                            <div class="col-md-4 mt-2"><img src="../static/honda3-min.jpg" class="img-fluid"> </div>
+                                            <br><br>
+                                            <div class="col-md-4 mt-2"><img src="../static/Honda4-min.jpg" class="img-fluid"></div>
+                                            <div class="col-md-4 mt-2"><img src="../static/Honda5-min.jpg" class="img-fluid"></div>
+                                            <div class="col-md-4 mt-2"><img src="../static/Honda6-min.jpg" class="img-fluid"></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                             <!-- End of modal section -->
+
+                      </div>
 					  <div class="card-body" align="center">
 					    <h4 class="card-title" style="font-weight: bold;" >Honda Civic</h4>
 					    <p class="card-text">Compact 4dr Sedan, with... Comfy Cloth seats, Blue and white Interior looks and Feels good, USB Port and Aux Cable provided, Integrated Motor Assist</p>
@@ -96,7 +146,56 @@
 
 				<div class="col-md-4">
 		          	<div class="card h-100 shadow rounded">
-					  <img class="card-img-top" src="../static/mercedesCompressed.jpg" alt="Car rental image" style="height: 50%; object-fit: cover; max-height: 200px; ">
+                      <div class="img-container" style="height: 50%; object-fit: cover; max-height: 200px; ">
+					    <img class="card-img-top" src="../static/mercedesCompressed.jpg" alt="Car rental image" style="max-height: 200px;">
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#ModalCenter">view</button>
+                        <style>
+                              .img-container .btn {
+                                  position: absolute;
+                                  top: 7%;
+                                  left: 85%;
+                                  transform: translate(-50%, -50%);
+                                  -ms-transform: translate(-50%, -50%);
+                                  color: white;
+                                  background-color: lightcoral;
+                                  font-size: .95em;
+                                  border: none;
+                                  cursor: pointer;
+                                  border-radius: 5px;
+                                }
+
+                                .img-container .btn:hover {
+                                  background-color: orangered;
+                                }
+                        </style>
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4"><img src="../static/mercedes1-min.jpg" class="img-fluid"> </div>
+                                            <div class="col-md-4 mt-2"><img src="../static/mercedes2-min.jpg" class="img-fluid"> </div>
+                                            <div class="col-md-4 mt-2"><img src="../static/mercedes3-min.jpg" class="img-fluid"> </div>
+                                            <br><br>
+                                            <div class="col-md-4 mt-2"><img src="../static/mercedes4-min.jpg" class="img-fluid"></div>
+                                            <div class="col-md-4 mt-2"><img src="../static/mercedes5-min.jpg" class="img-fluid"></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                             <!-- End of modal section -->
+
+                      </div>
 					  <div class="card-body" align="center">
 					    <h4 class="card-title" style="font-weight: bolder;">Mercedes-Benz C-class</h4>
 					    <p class="card-text">Compact 4dr Sedan, with... Comfy heated leather seats, Tan Interior looks and Feels good, USB Port and Aux Cable provided</p>
@@ -109,7 +208,58 @@
 
 				<div class="col-md-4">
 		          	<div class="card h-100 shadow rounded">
-					  <img class="card-img-top" src="../static/toyotaPriuscompressed.jpg" alt="Car rental image" style="height: 50%; object-fit: cover; max-height: 200px;">
+                      <div class="img-container" style="height: 50%; object-fit: cover; max-height: 200px; ">
+					    <img class="card-img-top" src="../static/toyotaPriuscompressed.jpg" alt="Car rental image" >
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#ModalCenter">view</button>
+                        <style>
+                              .img-container .btn {
+                                  position: absolute;
+                                  top: 7%;
+                                  left: 85%;
+                                  transform: translate(-50%, -50%);
+                                  -ms-transform: translate(-50%, -50%);
+                                  color: white;
+                                  background-color: lightcoral;
+                                  font-size: .95em;
+                                  border: none;
+                                  cursor: pointer;
+                                  border-radius: 5px;
+                                }
+
+                                .img-container .btn:hover {
+                                  background-color: orangered;
+                                }
+                        </style>
+
+                         <!-- Modal -->
+                          <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4"><img src="../static/prius1.1-min.jpg" class="img-fluid"> </div>
+                                            <div class="col-md-4 mt-2"><img src="../static/prius2-min.jpg" class="img-fluid"> </div>
+                                            <div class="col-md-4 mt-2"><img src="../static/prius3-min.jpg" class="img-fluid"> </div>
+                                            <br>
+                                            <div class="col-md-4 mt-2"><img src="../static/prius4-min.jpg" class="img-fluid"></div>
+                                            <div class="col-md-4 mt-2"><img src="../static/prius5-min.jpg" class="img-fluid"></div>
+                                            <div class="col-md-4 mt-2"><img src="../static/prius6-min.jpg" class="img-fluid"></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                             <!-- End of modal section -->
+
+                      </div>
+
 					  <div class="card-body" align="center">
 					    <h4 class="card-title" style="font-weight: bold;">Toyota Prius</h4>
 					    <p class="card-text">Compact 4dr Sedan, with.. Up to 48MPG Comfy Cloth seats, Tan Interior looks and Feels good, USB Port and Aux Cable provided</p>
@@ -123,7 +273,7 @@
                 <br>
 
                 {% for row in data %}
-                <div class="col-md-4">
+                <div class="col-md-4 mt-2">
                     <div class="card h-100 shadow rounded">
                         <img class="card-img-top img-fluid" src="../static/uploads/{{ row[3] }}" alt="Car rental image" style="height: 50%; object-fit: cover; max-height: 200px;">
                         <div class="card-body" align="center">
