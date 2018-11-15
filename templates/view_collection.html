@@ -80,7 +80,7 @@
 		<div class="container">
 			<div class="row">
 
-		        <div class="col-md-4">
+		        <div class="col-md-4 mb-3">
 		          <div class="card h-100 shadow rounded">
                       <div class="img-container" style="height: 50%; object-fit: cover; max-height: 200px">
 					    <img class="card-img-top" src="../static/HondaCivicCompressed.jpg" alt="Card image cap">
@@ -144,7 +144,7 @@
 		         </div>
 
 
-				<div class="col-md-4">
+				<div class="col-md-4 mb-3">
 		          	<div class="card h-100 shadow rounded">
                       <div class="img-container" style="height: 50%; object-fit: cover; max-height: 200px; ">
 					    <img class="card-img-top" src="../static/mercedesCompressed.jpg" alt="Car rental image" style="max-height: 200px;">
@@ -206,7 +206,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-4 mb-3">
 		          	<div class="card h-100 shadow rounded">
                       <div class="img-container" style="height: 50%; object-fit: cover; max-height: 200px; ">
 					    <img class="card-img-top" src="../static/toyotaPriuscompressed.jpg" alt="Car rental image" >
@@ -272,8 +272,74 @@
 
                 <br>
 
+
+                <div class="col-md-4 mb-3">
+		          	<div class="card h-100 shadow rounded">
+                      <div class="img-container" style="height: 50%; object-fit: cover; max-height: 200px; ">
+					    <img class="card-img-top" src="../static/chevloret_front-min.jpg" alt="Car rental image" >
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#ModalCenterChevrolet">view</button>
+                        <style>
+                              .img-container .btn {
+                                  position: absolute;
+                                  top: 7%;
+                                  left: 85%;
+                                  transform: translate(-50%, -50%);
+                                  -ms-transform: translate(-50%, -50%);
+                                  color: white;
+                                  background-color: lightcoral;
+                                  font-size: .95em;
+                                  border: none;
+                                  cursor: pointer;
+                                  border-radius: 5px;
+                                }
+
+                                .img-container .btn:hover {
+                                  background-color: orangered;
+                                }
+                        </style>
+
+                         <!-- Modal -->
+                          <div class="modal fade" id="ModalCenterChevrolet" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4"><img src="../static/chevloret1-min.jpg" class="img-fluid"> </div>
+                                            <div class="col-md-4 mt-2"><img src="../static/chevloret2-min.jpg" class="img-fluid"> </div>
+                                            <div class="col-md-4 mt-2"><img src="../static/chevloret3-min.jpg" class="img-fluid"> </div>
+                                            <br>
+                                            <div class="col-md-4 mt-2"><img src="../static/chevrolet4-min.jpg" class="img-fluid"></div>
+                                            <div class="col-md-4 mt-2"><img src="../static/chevrolet5-min.jpg" class="img-fluid"></div>
+                                            <div class="col-md-4 mt-2"><img src="../static/chevrolet6-min.jpg" class="img-fluid"></div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                             <!-- End of modal section -->
+
+                      </div>
+
+					  <div class="card-body" align="center">
+					    <h4 class="card-title" style="font-weight: bold;">Chevloret Sonic 2012</h4>
+					    <p class="card-text">Compact 4dr Sedan, with... Comfy Cloth seats, Interior looks and Feels good, USB Port and Aux Cable provided, Renter will pay EZPass if used,</p>
+					  </div>
+					  <div class="card-footer" align="center">
+					    <a href="https://turo.com/rentals/cars/ma/worcester/chevrolet-sonic/521929" class="btn btn-primary p-2 pl-5 pr-5" style="background-image: linear-gradient(to right, rgb(224, 82, 160), rgb(241, 92, 65)); font-weight: bolder; border-color: white;">Book</a>
+					  </div>
+					</div>
+				</div>
+
+
                 {% for row in data %}
-                <div class="col-md-4 mt-2">
+                <div class="col-md-4 mb-3">
                     <div class="card h-100 shadow rounded">
                         <img class="card-img-top img-fluid" src="../static/uploads/{{ row[3] }}" alt="Car rental image" style="height: 50%; object-fit: cover; max-height: 200px;">
                         <div class="card-body" align="center">
