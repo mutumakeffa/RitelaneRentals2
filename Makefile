@@ -4,6 +4,6 @@ default:
 	gunicorn --bind 0.0.0.0:80 --workers 3 --daemon app:app
 
 ssh:
-        @ssh root@207.148.17.93
+	@ssh root@207.148.17.93
 
-.PHONY: default
+.PHONY: ssh default
