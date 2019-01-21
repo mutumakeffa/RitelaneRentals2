@@ -118,7 +118,7 @@ def view():
             return render_template('view_collection.html', data=rows)
     except:
         return render_template("view_collection.html")
-    
+
 
 @app.route('/emails')
 def emails():
