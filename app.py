@@ -127,15 +127,18 @@ def emails():
 
     sql = """SELECT * FROM tbl_emails"""
 
-    cursor.execute(sql)
+    try:
+        cursor.execute(sql)
 
-    # fetch rows
-    rows = cursor.fetchall()  # rows can contain 0,1 or more rows
+        # fetch rows
+        rows = cursor.fetchall()  # rows can contain 0,1 or more rows
 
-    # perform a row count
-    if cursor.rowcount == 0:
-        return render_template('admin2.html', msg='No records')
-    else:
+        # perform a row count
+        if cursor.rowcount == 0:
+            return render_template('admin2.html', msg='No records')
+        else:
+            return render_template('admin2.html', data=rows)
+    except:
         return render_template('admin2.html', data=rows)
 
 
